@@ -63,7 +63,6 @@ class ArtFrame extends JFrame {
         // will update the panel with the new color option.
         for(int i = 0; i < NUM_OPTIONS; i++) {
             final JMenuItem temp = colorOptions.add(label + " " + (i + 1));
-            // CS324e students: add and change as necessary
             temp.addActionListener(new ActionListener() {
            	 
                 public void actionPerformed(ActionEvent e)
@@ -104,7 +103,6 @@ class ArtFrame extends JFrame {
                 thePanel.repaint();
             }
         });  
-        // CS324e students: add and change as necessary
         
         return result;
     }
@@ -115,10 +113,7 @@ class ArtFrame extends JFrame {
 } // end of ArtFrame class
 
 class ArtPanel extends JPanel   {
-    
-    // CS324e students. 
-    // Add class constants and instance variables here
-
+	
     public static final int SIZE = 500;
     public static final int NUM_COLOR_OPTIONS = 2;
     double xValue = -1;
@@ -147,8 +142,6 @@ class ArtPanel extends JPanel   {
         exp = new RandomExpression("xxACSSxCAyCyxASASCAyCCAyyyAAxMSxCxCAxSySMMCMCSMSCS");
         exp1 = new RandomExpression();
         exp2 = new RandomExpression();
-
-        // CS324e students: add and change as necessary
     }
     
     
@@ -167,7 +160,6 @@ class ArtPanel extends JPanel   {
     		        + exp1.toString() + "<br/>" +
     		        		"Color Equation 3: " 
     		        + exp2.toString() + "</body></html>";
-        // CS324e students: add and change as necessary
         
         return result;
     }
@@ -194,7 +186,6 @@ class ArtPanel extends JPanel   {
     	   makeColor1(g2);
         if (color == 2)
         	makeColor2(g2);
-     // CS324e students: add and change as necessary
     }
     
     public void makeGrey(Graphics g2)
@@ -281,18 +272,9 @@ class ArtPanel extends JPanel   {
     }
 
 
-    // CS324e students: add methods as necessary
 } // end of ArtPanel class
 
 class RandomExpression {
-    // TODO. Really need to implement expressions as a
-    // seperate class. As is, adding things is a pain.
-    // classic if else structure is dead give away that
-    // operators should represented as objects.
-    // The multiway else if is an antipattern!
-
-
-    // CS324e students: add your operator char here
     // each char represents a possible operator;
     // S = sin, C = cos, A = average, M = multiply
     // NOTE!! If operator is added must update
